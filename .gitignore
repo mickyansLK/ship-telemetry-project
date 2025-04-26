@@ -1,0 +1,17 @@
+
+echo "# Python virtual environments
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.duckdb
+.streamlit/
+.vscode/
+.idea/
+*.duckdb
+checkpoint/
+logs/
+*.log
+.env/

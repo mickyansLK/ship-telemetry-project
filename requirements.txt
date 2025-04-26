@@ -1,4 +1,7 @@
-kafka-python
+echo "streamlit
 duckdb
-pandas
+kafka-python
 pyspark
+pandas
+pydeck
+streamlit-autorefresh" 
