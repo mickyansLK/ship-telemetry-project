@@ -1,17 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-echo "# Python virtual environments
+# Virtual environments
+.venv/
 venv/
 ENV/
 env/
-__pycache__/
-*.py[cod]
-*.pyo
-*.duckdb
-.streamlit/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode, PyCharm, and other IDE settings
 .vscode/
 .idea/
-*.duckdb
-checkpoint/
-logs/
+
+# Python-specific files
+*.pyo
+*.pyd
+*.pyc
+
+# Log and data files
 *.log
-.env/
+*.csv
+*.dat
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Checkpoints, models, large generated files
+checkpoint*/
+**/checkpoint*/
+models/
+outputs/
+runs/
+
+# Test coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+
+# Packaging files
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Docker files (if using Docker)
+*.dockerfile
+docker-compose.yml
+.dockerignore
