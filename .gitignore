@@ -68,4 +68,3 @@ docker-compose.yml
 .dockerignore
 checkpoint_ship_telemetry/
 checkpoint_ship_telemetry
-ship_telemetry.duckdb

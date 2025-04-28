@@ -26,6 +26,7 @@ schema = StructType([
 kafka_df = spark.readStream.format("kafka") \
     .option("kafka.bootstrap.servers", "localhost:9092") \
     .option("subscribe", "ship-telemetry") \
+    .option("failOnDataLoss", "false") \
     .option("startingOffsets", "latest") \
     .load()
 
