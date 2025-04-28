@@ -3,7 +3,8 @@
 
 ## 🚀 Live App
 
-[![Open in Streamlit](https://ship-telemetry-project-xyokwb3tg3fbnkirhjj4qr.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ship-telemetry-project-xyokwb3tg3fbnkirhjj4qr.streamlit.app/)
+
 
 
 This project not only simulates and processes but also visualises 'real-time telemetry data' from ships in transit from various locations (e.g., Athens, Rome, Cappadocia) to Southampton, providing immediate and relevant insights.
