@@ -1,4 +1,10 @@
+# 🚢 Ship Telemetry Project
 🚢 Embark on a Journey with Our Real-Time Ship Telemetry Monitoring System
+
+## 🚀 Live App
+
+[![Open in Streamlit](https://ship-telemetry-project-xyokwb3tg3fbnkirhjj4qr.streamlit.app/)
+
 
 This project not only simulates and processes but also visualises 'real-time telemetry data' from ships in transit from various locations (e.g., Athens, Rome, Cappadocia) to Southampton, providing immediate and relevant insights.
 
