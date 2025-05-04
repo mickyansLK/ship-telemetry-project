@@ -52,4 +52,7 @@ It demonstrates **streaming IoT analytics**, using:
 
 ---
 
-![Architecture Diagram](C:\Users\micky\Downloads\Ship Telemetry.png)
+## 📊 Architecture Diagram
+
+![Architecture Diagram](architecture.png)
+
