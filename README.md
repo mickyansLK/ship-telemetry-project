@@ -40,3 +40,17 @@ It demonstrates **streaming IoT analytics**, using:
 ├── requirements.txt              # Python dependencies
 ├── README.md                     # Project documentation
 └── ship_telemetry.duckdb         # Duckdb database (auto-created)
+
+
+## ✅ Dashboard Features
+
+- 🔄 Auto-refresh every 10s
+- 🌍 Live map of ship locations and weather
+- 🧮 Fuel deviation + CII efficiency grading
+- 🛟 Critical alerts for low fuel
+- ⏪ Time playback slider
+
+---
+
+
+![Ship Telemetry Architecture](<Ship Telemetry.png>)

@@ -20,28 +20,27 @@ selected_ship = st.sidebar.selectbox(
     ("All Ships", "bellisimo", "santa-maria", "titanic")
 )
 
-# Connect to DuckDB
-conn = duckdb.connect(database="ship_telemetry.duckdb", read_only=True)
+import pyarrow.parquet as pq
+import os
 
-# Query latest telemetry
-query = """
-    SELECT 
-        ship_id, 
-        timestamp, 
-        lat, 
-        lon, 
-        fuel_level, 
-        distance_to_destination, 
-        weather_condition, 
-        speed, 
-        wind_speed
-    FROM ship_telemetry
-    ORDER BY timestamp DESC
-    LIMIT 500
-"""
+# 📦 Path where Spark writes the Parquet snapshot
+# Read raw telemetry from Spark output (Parquet)
+raw_data_path = "/home/mickyans/ship-telemetry-project/export/raw_ship_snapshot"
 
-df = conn.execute(query).fetchdf()
-conn.close()
+try:
+    files = [os.path.join(raw_data_path, f) for f in os.listdir(raw_data_path) if f.endswith(".parquet")]
+    if not files:
+        st.warning("⚠️ No raw telemetry data found yet.")
+        df = pd.DataFrame()
+    else:
+        table = pq.read_table(files)
+        df = table.to_pandas()
+        df["timestamp"] = pd.to_datetime(df["timestamp"])
+        st.success("✅ Raw telemetry data loaded")
+except Exception as e:
+    st.error(f"❌ Failed to load raw data: {e}")
+    df = pd.DataFrame()
+
 
 # Apply ship filter
 if selected_ship != "All Ships":

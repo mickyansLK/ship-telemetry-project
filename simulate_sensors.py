@@ -32,7 +32,7 @@ def simulate_movement(ship):
     # ver basic: move Northwest by a small amount
     ship["lat"] += random.uniform(-0.01, 0.01) # northward
     ship["lon"] += random.uniform(-0.01, 0.01) # westward
-    ship["fuel"] -= random.uniform(0.1, 0.5) # consume fuel
+    ship["fuel"] -= random.uniform(0.1, 0.9) # consume fuel
     ship["distance"] -= random.uniform(1, 5) # reduce distance to destination
     ship["weather"] = random.choice(weather_conditions) # random weather condition
 

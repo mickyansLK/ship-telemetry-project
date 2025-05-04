@@ -1,0 +1,28 @@
+
+version: 2
+
+models:
+  - name: ship_summary
+    description: >
+      Daily aggregated ship metrics, including average speed and fuel levels,
+      derived from telemetry data stored as Delta files.
+    columns:
+      - name: ship_id
+        description: "Unique ID of the ship"
+        tests:
+          - not_null
+      - name: day
+        description: "The day of the aggregation"
+        tests:
+          - not_null
+      - name: avg_speed_knots
+        description: "Average speed in knots"
+      - name: avg_fuel_level
+        description: "Average fuel level"
+      - name: total_records
+        description: "Number of telemetry records included in aggregation"
+      - name: speed_category
+        description: "Derived label: High Speed, Cruise, or Idle"
+        tests:
+          - accepted_values:
+              values: ["High Speed", "Cruise", "Idle"]

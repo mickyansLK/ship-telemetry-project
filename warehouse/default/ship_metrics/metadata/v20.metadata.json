@@ -1,0 +1,582 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "e8a55908-1105-4c74-a2b1-6079b4147edd",
+  "location" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics",
+  "last-sequence-number" : 19,
+  "last-updated-ms" : 1746335386792,
+  "last-column-id" : 7,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "window",
+      "required" : false,
+      "type" : {
+        "type" : "struct",
+        "fields" : [ {
+          "id" : 6,
+          "name" : "start",
+          "required" : false,
+          "type" : "timestamptz"
+        }, {
+          "id" : 7,
+          "name" : "end",
+          "required" : false,
+          "type" : "timestamptz"
+        } ]
+      }
+    }, {
+      "id" : 2,
+      "name" : "ship_id",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "avg_fuel",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 4,
+      "name" : "avg_speed",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 5,
+      "name" : "avg_wind",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "window.start_day",
+      "transform" : "day",
+      "source-id" : 6,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "mickyans",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 228783710773149589,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 228783710773149589,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 8021429790035442511,
+    "timestamp-ms" : 1746335275253,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "0",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-8021429790035442511-1-5418d78d-1cc0-4ba8-83a7-c1e6a3dd3b4a.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 4518967626574174281,
+    "parent-snapshot-id" : 8021429790035442511,
+    "timestamp-ms" : 1746335287309,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "1",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-4518967626574174281-1-ba3e136e-0008-4d0e-95ae-1775b0d840a6.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 3,
+    "snapshot-id" : 7218307477106261082,
+    "parent-snapshot-id" : 4518967626574174281,
+    "timestamp-ms" : 1746335293522,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "2",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-7218307477106261082-1-3ad44423-d86e-4e06-b740-0caeed18674b.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 4,
+    "snapshot-id" : 8071151245880951928,
+    "parent-snapshot-id" : 7218307477106261082,
+    "timestamp-ms" : 1746335301446,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "3",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "added-data-files" : "3",
+      "added-records" : "3",
+      "added-files-size" : "5727",
+      "changed-partition-count" : "1",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-8071151245880951928-1-adf4d7db-1f5c-47d0-95e2-a388af891096.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 5,
+    "snapshot-id" : 2473044146519734602,
+    "parent-snapshot-id" : 8071151245880951928,
+    "timestamp-ms" : 1746335309405,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "4",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-2473044146519734602-1-a7ea7112-9b4c-471c-8555-7ffec65cb8d4.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 6,
+    "snapshot-id" : 4731883591248505879,
+    "parent-snapshot-id" : 2473044146519734602,
+    "timestamp-ms" : 1746335318252,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "5",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-4731883591248505879-1-f7d2ba8d-b148-4a88-b926-13a9df3662dc.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 7,
+    "snapshot-id" : 1496379704907905676,
+    "parent-snapshot-id" : 4731883591248505879,
+    "timestamp-ms" : 1746335324419,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "6",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-1496379704907905676-1-185a3573-8268-4bf4-80ac-ed9bc4cf4280.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 8,
+    "snapshot-id" : 726353903404356145,
+    "parent-snapshot-id" : 1496379704907905676,
+    "timestamp-ms" : 1746335331412,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "7",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-726353903404356145-1-15762a0c-8d3a-446e-817a-1fc2e1958c56.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 9,
+    "snapshot-id" : 8633580769697803524,
+    "parent-snapshot-id" : 726353903404356145,
+    "timestamp-ms" : 1746335339099,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "8",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-8633580769697803524-1-1f4e9b33-a596-4813-a074-d983a6baa0a5.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 10,
+    "snapshot-id" : 6576007283913441390,
+    "parent-snapshot-id" : 8633580769697803524,
+    "timestamp-ms" : 1746335343989,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "9",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-6576007283913441390-1-a2836757-78cf-4d7f-b0bf-79f7ed2c3ffe.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 11,
+    "snapshot-id" : 2448318489833728328,
+    "parent-snapshot-id" : 6576007283913441390,
+    "timestamp-ms" : 1746335349158,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "10",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "3",
+      "total-files-size" : "5727",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-2448318489833728328-1-0b6792fd-29f0-4bf0-b5bd-c37cb041bee0.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 12,
+    "snapshot-id" : 8808766784486107201,
+    "parent-snapshot-id" : 2448318489833728328,
+    "timestamp-ms" : 1746335355819,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "11",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "added-data-files" : "3",
+      "added-records" : "3",
+      "added-files-size" : "5727",
+      "changed-partition-count" : "1",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-8808766784486107201-1-850d033e-d0ea-4c61-a9be-8c83219ba8f9.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 13,
+    "snapshot-id" : 4442031637941239199,
+    "parent-snapshot-id" : 8808766784486107201,
+    "timestamp-ms" : 1746335360228,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "12",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-4442031637941239199-1-fd3db419-c4fc-4ba3-b6e4-6b72cb496711.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 14,
+    "snapshot-id" : 5659827705955934677,
+    "parent-snapshot-id" : 4442031637941239199,
+    "timestamp-ms" : 1746335364818,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "13",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-5659827705955934677-1-47ceaa65-b2ed-4233-8441-ab4e471ca4e3.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 15,
+    "snapshot-id" : 3835594207003988083,
+    "parent-snapshot-id" : 5659827705955934677,
+    "timestamp-ms" : 1746335369746,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "14",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-3835594207003988083-1-41e173eb-fe6b-4d68-b966-7981694a5ff2.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 16,
+    "snapshot-id" : 6057299326219079769,
+    "parent-snapshot-id" : 3835594207003988083,
+    "timestamp-ms" : 1746335374684,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "15",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-6057299326219079769-1-d5774edd-9d23-4812-b1dc-a60b20237ad0.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 17,
+    "snapshot-id" : 7859850471328631547,
+    "parent-snapshot-id" : 6057299326219079769,
+    "timestamp-ms" : 1746335378710,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "16",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-7859850471328631547-1-fc8c43aa-86c3-4733-b9b9-795ccfb99058.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 18,
+    "snapshot-id" : 6273261904665081802,
+    "parent-snapshot-id" : 7859850471328631547,
+    "timestamp-ms" : 1746335382861,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "17",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-6273261904665081802-1-f093015f-3998-4311-9714-c044b883a58a.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 19,
+    "snapshot-id" : 228783710773149589,
+    "parent-snapshot-id" : 6273261904665081802,
+    "timestamp-ms" : 1746335386792,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1746335252517",
+      "spark.sql.streaming.epochId" : "18",
+      "spark.sql.streaming.queryId" : "eaeceec9-5952-4959-8b30-237c0520a0bb",
+      "changed-partition-count" : "0",
+      "total-records" : "6",
+      "total-files-size" : "11454",
+      "total-data-files" : "6",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/snap-228783710773149589-1-325bb86c-372e-4fd8-b521-54dc69f30588.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1746335275253,
+    "snapshot-id" : 8021429790035442511
+  }, {
+    "timestamp-ms" : 1746335287309,
+    "snapshot-id" : 4518967626574174281
+  }, {
+    "timestamp-ms" : 1746335293522,
+    "snapshot-id" : 7218307477106261082
+  }, {
+    "timestamp-ms" : 1746335301446,
+    "snapshot-id" : 8071151245880951928
+  }, {
+    "timestamp-ms" : 1746335309405,
+    "snapshot-id" : 2473044146519734602
+  }, {
+    "timestamp-ms" : 1746335318252,
+    "snapshot-id" : 4731883591248505879
+  }, {
+    "timestamp-ms" : 1746335324419,
+    "snapshot-id" : 1496379704907905676
+  }, {
+    "timestamp-ms" : 1746335331412,
+    "snapshot-id" : 726353903404356145
+  }, {
+    "timestamp-ms" : 1746335339099,
+    "snapshot-id" : 8633580769697803524
+  }, {
+    "timestamp-ms" : 1746335343989,
+    "snapshot-id" : 6576007283913441390
+  }, {
+    "timestamp-ms" : 1746335349158,
+    "snapshot-id" : 2448318489833728328
+  }, {
+    "timestamp-ms" : 1746335355819,
+    "snapshot-id" : 8808766784486107201
+  }, {
+    "timestamp-ms" : 1746335360228,
+    "snapshot-id" : 4442031637941239199
+  }, {
+    "timestamp-ms" : 1746335364818,
+    "snapshot-id" : 5659827705955934677
+  }, {
+    "timestamp-ms" : 1746335369746,
+    "snapshot-id" : 3835594207003988083
+  }, {
+    "timestamp-ms" : 1746335374684,
+    "snapshot-id" : 6057299326219079769
+  }, {
+    "timestamp-ms" : 1746335378710,
+    "snapshot-id" : 7859850471328631547
+  }, {
+    "timestamp-ms" : 1746335382861,
+    "snapshot-id" : 6273261904665081802
+  }, {
+    "timestamp-ms" : 1746335386792,
+    "snapshot-id" : 228783710773149589
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1746335260362,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v1.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335275253,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v2.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335287309,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v3.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335293522,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v4.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335301446,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v5.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335309405,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v6.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335318252,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v7.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335324419,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v8.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335331412,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v9.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335339099,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v10.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335343989,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v11.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335349158,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v12.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335355819,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v13.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335360228,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v14.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335364818,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v15.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335369746,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v16.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335374684,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v17.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335378710,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v18.metadata.json"
+  }, {
+    "timestamp-ms" : 1746335382861,
+    "metadata-file" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics/metadata/v19.metadata.json"
+  } ]
+}

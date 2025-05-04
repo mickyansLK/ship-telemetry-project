@@ -1,66 +1,58 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+*.db
+*.egg-info/
+*.ipynb_checkpoints
 
 # Virtual environments
 .venv/
 venv/
 ENV/
 env/
-.env/
+*.env
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Spark checkpoints and temporary output
+checkpoint_*/
+spark-warehouse/
+metastore_db/
+.derby/
 
-# VSCode, PyCharm, and other IDE settings
+# Parquet and export data
+/home/mickyans/ship-telemetry-project/export/
+export/
+*.parquet
+*.csv
+*.avro
+*.orc
+
+# Kafka/streaming temp files
+*.pid
+*.lock
+*.gz
+*.snappy
+*.log
+
+# DuckDB local files
+*.duckdb
+
+# VSCode / JetBrains IDEs
 .vscode/
 .idea/
 
-# Python-specific files
-*.pyo
-*.pyd
-*.pyc
-
-# Log and data files
-*.log
-*.csv
-*.dat
-*.tmp
-
-# System files
+# OS-specific
 .DS_Store
 Thumbs.db
 
-# Checkpoints, models, large generated files
-checkpoint*/
-**/checkpoint*/
-models/
-outputs/
-runs/
+# Streamlit cache
+.streamlit/config.toml
+**/.streamlit/
+**/.pytest_cache/
 
-# Test coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-coverage.xml
-
-# Packaging files
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # Docker files (if using Docker)
 *.dockerfile

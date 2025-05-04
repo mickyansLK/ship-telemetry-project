@@ -1,0 +1,80 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "18bc7853-30f4-4104-972f-31868ccbe696",
+  "location" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_telemetry",
+  "last-sequence-number" : 0,
+  "last-updated-ms" : 1746334840223,
+  "last-column-id" : 9,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "ship_id",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "timestamp",
+      "required" : false,
+      "type" : "timestamptz"
+    }, {
+      "id" : 3,
+      "name" : "lat",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 4,
+      "name" : "lon",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 5,
+      "name" : "fuel_level",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 6,
+      "name" : "distance_to_destination",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 7,
+      "name" : "weather_condition",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 8,
+      "name" : "speed",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 9,
+      "name" : "wind_speed",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "mickyans",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : -1,
+  "refs" : { },
+  "snapshots" : [ ],
+  "statistics" : [ ],
+  "snapshot-log" : [ ],
+  "metadata-log" : [ ]
+}

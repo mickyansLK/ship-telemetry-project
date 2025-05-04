@@ -1,0 +1,78 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "e8a55908-1105-4c74-a2b1-6079b4147edd",
+  "location" : "/home/mickyans/ship-telemetry-project/warehouse/default/ship_metrics",
+  "last-sequence-number" : 0,
+  "last-updated-ms" : 1746335260362,
+  "last-column-id" : 7,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "window",
+      "required" : false,
+      "type" : {
+        "type" : "struct",
+        "fields" : [ {
+          "id" : 6,
+          "name" : "start",
+          "required" : false,
+          "type" : "timestamptz"
+        }, {
+          "id" : 7,
+          "name" : "end",
+          "required" : false,
+          "type" : "timestamptz"
+        } ]
+      }
+    }, {
+      "id" : 2,
+      "name" : "ship_id",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "avg_fuel",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 4,
+      "name" : "avg_speed",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 5,
+      "name" : "avg_wind",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "window.start_day",
+      "transform" : "day",
+      "source-id" : 6,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "mickyans",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : -1,
+  "refs" : { },
+  "snapshots" : [ ],
+  "statistics" : [ ],
+  "snapshot-log" : [ ],
+  "metadata-log" : [ ]
+}

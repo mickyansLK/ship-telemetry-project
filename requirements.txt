@@ -5,3 +5,4 @@ pyspark
 pandas
 pydeck
 streamlit-autorefresh
+motherduck-python
