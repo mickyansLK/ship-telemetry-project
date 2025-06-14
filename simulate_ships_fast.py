@@ -2,7 +2,7 @@ import json
 import time
 import random
 from datetime import datetime
-from kafka import KafkaProducer
+from confluent_kafka import Producer
 import duckdb
 import pandas as pd
 
@@ -10,10 +10,9 @@ KAFKA_BROKER = 'localhost:9092'
 TOPIC = "ship-telemetry"
 
 # Initialize Kafka producer
-producer = KafkaProducer(
-    bootstrap_servers=KAFKA_BROKER,
-    value_serializer=lambda v: json.dumps(v).encode('utf-8')
-)
+producer = Producer({
+    'bootstrap.servers': KAFKA_BROKER
+})
 
 # Connect to DuckDB for local storage
 conn = duckdb.connect(database="ship_dashboard.duckdb", read_only=False)
@@ -68,7 +67,7 @@ for _ in range(30):
         }
         
         # Send to Kafka
-        producer.send(TOPIC, value=data)
+        producer.produce(TOPIC, value=json.dumps(data).encode('utf-8'))
         batch_records.append(data)
         print(f"Sent data: {data}")
     
